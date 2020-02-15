@@ -1,0 +1,152 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6C5BC8F7C5C6A211",
+      "device": "xc7z020clg400-1",
+      "name": "TopDesign",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "VideoOut": {
+        "v_axi4s_vid_out": "",
+        "v_tc": "",
+        "rgb2dvi_0": ""
+      }
+    },
+    "interface_ports": {
+      "hdmi_tx": {
+        "mode": "Master",
+        "vlnv": "digilentinc.com:interface:tmds_rtl:1.0"
+      }
+    },
+    "components": {
+      "VideoOut": {
+        "interface_ports": {
+          "TMDS": {
+            "mode": "Master",
+            "vlnv": "digilentinc.com:interface:tmds_rtl:1.0"
+          },
+          "videoIn": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "clkPixel": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "aclkStream": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "aresetnStream": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "v_axi4s_vid_out": {
+            "vlnv": "xilinx.com:ip:v_axi4s_vid_out:4.0",
+            "xci_name": "TopDesign_v_axi4s_vid_out_0_0",
+            "parameters": {
+              "C_HAS_ASYNC_CLK": {
+                "value": "1"
+              }
+            }
+          },
+          "v_tc": {
+            "vlnv": "xilinx.com:ip:v_tc:6.1",
+            "xci_name": "TopDesign_v_tc_0_0",
+            "parameters": {
+              "HAS_AXI4_LITE": {
+                "value": "false"
+              },
+              "VIDEO_MODE": {
+                "value": "800x600p"
+              },
+              "enable_detection": {
+                "value": "false"
+              }
+            }
+          },
+          "rgb2dvi_0": {
+            "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
+            "xci_name": "TopDesign_rgb2dvi_0_0",
+            "parameters": {
+              "kClkRange": {
+                "value": "3"
+              },
+              "kRstActiveHigh": {
+                "value": "true"
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "Conn1": {
+            "interface_ports": [
+              "TMDS",
+              "rgb2dvi_0/TMDS"
+            ]
+          },
+          "Conn2": {
+            "interface_ports": [
+              "videoIn",
+              "v_axi4s_vid_out/video_in"
+            ]
+          },
+          "v_tc_0_vtiming_out": {
+            "interface_ports": [
+              "v_tc/vtiming_out",
+              "v_axi4s_vid_out/vtiming_in"
+            ]
+          },
+          "v_axi4s_vid_out_0_vid_io_out": {
+            "interface_ports": [
+              "v_axi4s_vid_out/vid_io_out",
+              "rgb2dvi_0/RGB"
+            ]
+          }
+        },
+        "nets": {
+          "v_axi4s_vid_out_0_vtg_ce": {
+            "ports": [
+              "v_axi4s_vid_out/vtg_ce",
+              "v_tc/gen_clken"
+            ]
+          },
+          "clk_0_1": {
+            "ports": [
+              "clkPixel",
+              "v_tc/clk",
+              "v_axi4s_vid_out/vid_io_out_clk",
+              "rgb2dvi_0/PixelClk"
+            ]
+          },
+          "aclk_0_1": {
+            "ports": [
+              "aclkStream",
+              "v_axi4s_vid_out/aclk"
+            ]
+          },
+          "aresetn_0_1": {
+            "ports": [
+              "aresetnStream",
+              "v_axi4s_vid_out/aresetn"
+            ]
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "VideoOut_TMDS_1": {
+        "interface_ports": [
+          "hdmi_tx",
+          "VideoOut/TMDS"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="snake_output.cpp" path="C:\Users\shinderink\REC\snake_output\src\snake_output.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="snake_output_tb.cpp" path="C:\Users\shinderink\REC\snake_output\src\snake_output_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

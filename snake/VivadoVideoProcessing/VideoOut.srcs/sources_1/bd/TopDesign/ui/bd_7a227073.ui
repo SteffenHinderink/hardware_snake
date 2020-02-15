@@ -1,0 +1,14 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port hdmi_tx -pg 1 -y 90 -defaultsOSRD
+preplace inst VideoOut -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace netloc VideoOut_TMDS_1 1 1 1 NJ
+levelinfo -pg 1 0 130 270 -top 0 -bot 170
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_ps7_cnt":"1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'snake_output' consists of the following:&#xD;&#xA;&#x9;'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [29]  (0 ns)&#xD;&#xA;&#x9;'icmp' operation ('exitcond_flatten') [46]  (2.44 ns)&#xD;&#xA;&#x9;'select' operation ('t_V_1_mid', src/snake_output.cpp:16) [47]  (0.687 ns)&#xD;&#xA;&#x9;'add' operation ('row.V', src/snake_output.cpp:15) [62]  (1.73 ns)&#xD;&#xA;&#x9;'select' operation ('t_V_1_mid2', src/snake_output.cpp:16) [74]  (0.687 ns)&#xD;&#xA;&#x9;'or' operation ('tmp_2', src/snake_output.cpp:20) [78]  (0 ns)&#xD;&#xA;&#x9;'icmp' operation ('video.user.V', src/snake_output.cpp:20) [79]  (1.77 ns)&#xD;&#xA;&#x9;blocking operation 1.78 ns on control path)" projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:21.609+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.1005ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:21.601+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'snake_output_ap_sitodp_4_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:58.610+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'snake_output_ap_sitodp_4_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:56.985+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'snake_output_ap_dsub_3_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:55.382+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'snake_output_ap_dmul_4_max_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:53.778+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'snake_output_ap_ddiv_29_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="snake_output.prj" solutionName="solution1" date="2020-02-12T16:31:51.487+0100" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
